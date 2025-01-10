@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(240, 240, 240);
     border-radius: 10px;
     box-shadow: 0 0 5px 1px;
 }
@@ -17,6 +16,19 @@
         margin-top: 20px;
         width: 80px;
         height: 38px;
+    }
+
+.filters{
+    height: 130px;
+}
+    .filters input[type="text"] {
+        margin-top: 10px;
+    }
+    .filters input[type="date"] {
+        margin-top: 10px;
+    }
+    .filters input[type="number"] {
+        margin-top: 10px;
     }
 
 .remove-button {

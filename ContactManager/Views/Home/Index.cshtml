@@ -7,7 +7,7 @@
 </head>
 
 <form action="/Home/Upload" enctype="multipart/form-data" method="post" class="uploading">
-    <input type="file" name="file">
+    <input type="file" name="file" class="form-control">
     @if (ViewData["FileErrorMessage"] != null)
     {
         <label class="text-danger">@ViewData["FileErrorMessage"]</label>
@@ -38,27 +38,10 @@
                 </th>
                 <th></th>
             </tr>
-            <tr id="filtersTR">
+            <tr id="filtersTR" class="filters">
             </tr>
         </thead>
         <tbody id="contactsTBody" class="tbody">
         </tbody>
-        @* @foreach (Contact contact in Model.Contacts)
-        {
-            <tr id="@("row"+contact.Id)" class="table-row">
-                <td>
-                    <button id="@("remove"+contact.Id)" class="remove-button"></button>
-                </td>
-                <td id="name">@contact.Name</td>
-                <td id="bdate">@contact.DateOfBirth.ToString("dd.MM.yyyy")</td>
-                <td id="married">@(contact.Married ? "Yes" : "No")</td>
-                <td id="phone)">@contact.Phone</td>
-                <td id="salary">@contact.Salary</td>
-                <td class="edit-submitting">
-                    <button id="@("submit"+contact.Id)">submit</button>
-                    <button id="@("cancel"+contact.Id)">cancel</button>
-                </td>
-            </tr>
-        } *@
     </table>
 </div>
