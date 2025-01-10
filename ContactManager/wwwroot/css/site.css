@@ -1,0 +1,51 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.arrow {
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    border: 0;
+    background-color: transparent;
+}
+
+    .arrow:hover {
+        width: 12px;
+        height: 12px;
+    }
+
+.arrow-up-disable {
+    background-image: url("../images/arrow-up-disable.png");
+}
+
+.arrow-up-enable {
+    background-image: url("../images/arrow-up-enable.png");
+}
+
+.arrow-down-disable {
+    background-image: url("../images/arrow-down-disable.png");
+}
+
+.arrow-down-enable {
+    background-image: url("../images/arrow-down-enable.png");
+}

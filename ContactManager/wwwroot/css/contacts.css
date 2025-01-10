@@ -1,0 +1,44 @@
+﻿.uploading {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px;
+}
+
+    .uploading label {
+        padding: 2px;
+    }
+
+    .uploading button {
+        margin-top: 20px;
+        width: 80px;
+        height: 38px;
+    }
+
+.remove-button {
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/bin.png");
+    background-size: cover;
+    border: 0;
+    background-color: transparent;
+}
+
+    .remove-button:hover {
+        border: 2px solid;
+        border-color: rgb(108, 108, 108);
+        border-radius: 20%;
+    }
+
+.data-table {
+    margin-top: 30px;
+}
+
+.table-row {
+    height: 40px;
+}

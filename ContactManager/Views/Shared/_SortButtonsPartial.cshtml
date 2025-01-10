@@ -1,0 +1,9 @@
+﻿@model string
+
+<div class="d-flex flex-row justify-content-between align-items-center">
+    <span>@Model</span>
+    <div class="d-flex flex-column justify-content-around align-items-center">
+        <a class="arrow arrow-up arrow-up-disable" id="@("desc."+Model.Substring(0,2).ToLower())"></a>
+        <a class="arrow arrow-down arrow-down-disable" id="@("asc."+Model.Substring(0,2).ToLower())"></a>
+    </div>
+</div>

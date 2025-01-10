@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Contact Manager";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/contacts.css" asp-append-version="true" />
+</head>
+
+<form action="/Home/Upload" enctype="multipart/form-data" method="post" class="uploading">
+    <input type="file" name="file">
+    @if (ViewData["FileErrorMessage"] != null)
+    {
+        <label class="text-danger">@ViewData["FileErrorMessage"]</label>
+    }
+    <button class="btn btn-primary" type="submit">Upload</button>
+</form>
+
+
+<div class="data-table">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>
+                    <partial name="_SortButtonsPartial" model='"Name"'>
+                </th>
+                <th>
+                    <partial name="_SortButtonsPartial" model='"Date of Birth"'>
+                </th>
+                <th>
+                    <partial name="_SortButtonsPartial" model='"Married"'>
+                </th>
+                <th>
+                    <partial name="_SortButtonsPartial" model='"Phone"'>
+                </th>
+                <th>
+                    <partial name="_SortButtonsPartial" model='"Salary"'>
+                </th>
+                <th></th>
+            </tr>
+            <tr id="filtersTR">
+            </tr>
+        </thead>
+        <tbody id="contactsTBody" class="tbody">
+        </tbody>
+        @* @foreach (Contact contact in Model.Contacts)
+        {
+            <tr id="@("row"+contact.Id)" class="table-row">
+                <td>
+                    <button id="@("remove"+contact.Id)" class="remove-button"></button>
+                </td>
+                <td id="name">@contact.Name</td>
+                <td id="bdate">@contact.DateOfBirth.ToString("dd.MM.yyyy")</td>
+                <td id="married">@(contact.Married ? "Yes" : "No")</td>
+                <td id="phone)">@contact.Phone</td>
+                <td id="salary">@contact.Salary</td>
+                <td class="edit-submitting">
+                    <button id="@("submit"+contact.Id)">submit</button>
+                    <button id="@("cancel"+contact.Id)">cancel</button>
+                </td>
+            </tr>
+        } *@
+    </table>
+</div>
